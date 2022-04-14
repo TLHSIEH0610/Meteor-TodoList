@@ -1,0 +1,13 @@
+button {
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  color: white;
+  box-shadow: 0 3px 3px rgba(34, 25, 25, 0.4);
+  padding: 5px;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: 0;
+}
