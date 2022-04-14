@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { TaskCollection } from "../api/TasksCollection";
+// import { TaskCollection } from "../api/TasksCollection";
 import { Meteor } from "meteor/meteor";
 
-const TaskForm = ({ user }: { user: Meteor.User }) => {
+const TaskForm = () => {
   const [text, setText] = useState("");
   const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    TaskCollection.insert({
-      text: text,
-      createdAt: new Date(),
-      isChecked: false,
-      userID: user._id,
-    });
+    Meteor.call("tasks.insert", text);
+    // TaskCollection.insert({
+    //   text: text,
+    //   createdAt: new Date(),
+    //   isChecked: false,
+    //   userID: user._id,
+    // });
     setText("");
   };
   return (

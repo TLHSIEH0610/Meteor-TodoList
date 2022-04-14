@@ -2,44 +2,41 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-
   justify-content: center;
   align-items: center;
+
+  & > div {
+    margin: 8px;
+    & > label {
+      font-weight: bold;
+    }
+    & > input {
+      flex-grow: 1;
+      box-sizing: border-box;
+      padding: 10px 6px;
+      background: transparent;
+      border: 1px solid #aaa;
+      width: 100%;
+      font-size: 1em;
+      margin-right: 16px;
+      margin-top: 4px;
+    }
+    & > input:focus {
+      outline: 0;
+    }
+    & > button {
+      background-color: #62807e;
+    }
+  }
 }
 
-.loginForm > div {
-  margin: 8px;
-}
-
-.loginForm > div > label {
-  font-weight: bold;
-}
-
-.loginForm > div > input {
-  flex-grow: 1;
-  box-sizing: border-box;
-  padding: 10px 6px;
-  background: transparent;
-  border: 1px solid #aaa;
-  width: 100%;
-  font-size: 1em;
-  margin-right: 16px;
-  margin-top: 4px;
-}
-
-.loginForm > div > input:focus {
-  outline: 0;
-}
-
-.loginForm > div > button {
-  background-color: #62807e;
+::placeholder {
+  color: lightgray;
 }
 
 .user {
   display: flex;
-
   align-self: flex-end;
-
   margin: 8px 16px 0;
   font-weight: bold;
 }
